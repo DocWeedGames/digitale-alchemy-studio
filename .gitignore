@@ -27,5 +27,5 @@ Thumbs.db
 *.sqlite3
 *.db
 
-# Secrets (falls vorhanden)
+# Secrets
 .env
