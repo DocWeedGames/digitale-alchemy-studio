@@ -1,0 +1,51 @@
+# 1. Git initialisieren
+git init
+
+# 2. .gitignore erstellen (optional, aber empfohlen)
+@"
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.build/
+dist/
+*.log
+
+# Virtual Environments
+.venv/
+env/
+venv/
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datenbanken / lokale Dateien
+*.sqlite
+*.sqlite3
+*.db
+
+# Secrets
+.env
+"@ | Out-File -FilePath .gitignore -Encoding utf8 -NoNewline
+
+# 3. README hinzufügen (optional)
+"Digitale Alchemy Studio" | Out-File -FilePath README.md -Encoding utf8
+
+# 4. Dateien hinzufügen und committen
+git add .
+git commit -m "Initial commit"
+
+# 5. Remote-Repo verbinden
+git remote add origin https://github.com/DocWeedGames/digitale-alchemy-studio.git
+git branch -M main
+
+# 6. Push zu GitHub
+git push -u origin main
